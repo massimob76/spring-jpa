@@ -2,24 +2,28 @@ package spring_jpa.dto;
 
 import java.time.Instant;
 import java.util.Objects;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class ScoreDTO {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
 
+    @Column(nullable=false)
     private String name;
 
+    @Column(nullable=false)
     private String game;
 
+    @Column(nullable=false)
     private int score;
 
+    @Column(nullable=false)
     private Instant timestamp;
 
     ScoreDTO() {}
