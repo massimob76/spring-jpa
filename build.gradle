@@ -15,7 +15,17 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter:2.0.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa:2.0.3.RELEASE'
     runtime 'mysql:mysql-connector-java:8.0.12'
+
+    testCompile ('org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE') {
+        exclude group: 'junit', module: 'junit'
+    }
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.3.0'
 //    runtime 'com.h2database:h2:1.4.197'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 repositories {
