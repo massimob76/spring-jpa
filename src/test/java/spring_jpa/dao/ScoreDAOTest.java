@@ -21,7 +21,7 @@ class ScoreDAOTest {
 
   @Test
   void canSaveAScore() {
-    Score score = new Score("Massimo", "candy crush", 123, Instant.now().truncatedTo(SECONDS));
+    Score score = new Score("Massimo", "candy crush", 150, Instant.now().truncatedTo(SECONDS));
     scoreDAO.save(score);
     assertEquals(asList(score), scoreDAO.findAll());
   }

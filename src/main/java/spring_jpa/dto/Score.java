@@ -1,5 +1,7 @@
 package spring_jpa.dto;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 import java.time.Instant;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -11,7 +13,7 @@ import javax.persistence.Id;
 public class Score {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = IDENTITY)
     private Integer id;
 
     @Column(nullable=false)
