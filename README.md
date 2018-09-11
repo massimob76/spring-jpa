@@ -7,8 +7,8 @@
 # Create DB:
 
 ```sh
-CREATE DATABASE dev;
-USE dev;
+CREATE DATABASE test;
+USE test;
 CREATE TABLE IF NOT EXISTS score (
     name VARCHAR(30),
     game VARCHAR(30),

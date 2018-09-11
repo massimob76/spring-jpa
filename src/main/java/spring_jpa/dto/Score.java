@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class ScoreDTO {
+public class Score {
 
     @Id
     @GeneratedValue
@@ -26,9 +26,9 @@ public class ScoreDTO {
     @Column(nullable=false)
     private Instant timestamp;
 
-    ScoreDTO() {}
+    Score() {}
 
-    public ScoreDTO(String name, String game, int score, Instant timestamp) {
+    public Score(String name, String game, int score, Instant timestamp) {
         this.name = name;
         this.game = game;
         this.score = score;
@@ -59,7 +59,7 @@ public class ScoreDTO {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ScoreDTO scoreDTO = (ScoreDTO) o;
+        Score scoreDTO = (Score) o;
         return score == scoreDTO.score &&
             Objects.equals(id, scoreDTO.id) &&
             Objects.equals(name, scoreDTO.name) &&
