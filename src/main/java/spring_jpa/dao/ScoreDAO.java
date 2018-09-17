@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ScoreDAO extends JpaRepository<Score, Long> {
 
+  Score findByNameAndGame(String name, String game);
+
 
 
 }
