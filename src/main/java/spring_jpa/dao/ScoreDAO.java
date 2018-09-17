@@ -8,6 +8,9 @@ public interface ScoreDAO extends JpaRepository<Score, Long> {
 
   Score findByNameAndGame(String name, String game);
 
+  Score findTopByGameOrderByScoreDesc(String game);
+
+  Score findTopByOrderByScoreDesc();
 
 
 }

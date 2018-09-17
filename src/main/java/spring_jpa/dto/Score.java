@@ -31,6 +31,11 @@ public class Score {
     Score() {}
 
     public Score(String name, String game, int score, Instant timestamp) {
+        this(null, name, game, score, timestamp);
+    }
+
+    public Score(Integer id, String name, String game, int score, Instant timestamp) {
+        this.id = id;
         this.name = name;
         this.game = game;
         this.score = score;
