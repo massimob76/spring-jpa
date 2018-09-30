@@ -42,6 +42,10 @@ public class Score {
         this.timestamp = timestamp;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
